@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Roboto-Regular.woff2") format("woff2");
+}
+
+@theme {
+  --font-sans: "Roboto", "Arial";
+  --breakpoint-xs: 480px;
+
+  --color-bkg: #ebebeb;
+  --color-bkg2: #e6e6e6;
+  --color-heading: #000000;
+  --color-content: #0c0c0c;
+  --color-content2: #444444;
+  --color-br: #bcbcbc;
+  --color-comp: #cccccc;
+  --color-comp2: #f4f4f4;
+  --color-hv: #bbbbbb;
+  --color-logo: #000000;
+  --color-accent: #0070e0;
+  --color-accent2: #0066cc;
+  --color-accent3: #ff6600;
+}
+
+:root[class="dark"] {
+  --color-bkg: #292929;
+  --color-bkg2: #282828;
+  --color-heading: #ffffff;
+  --color-content: #e0e0e0;
+  --color-content2: #cccccc;
+  --color-br: #4a4a4a;
+  --color-comp: #3a3a3a;
+  --color-comp2: #232323;
+  --color-hv: #4b4b4b;
+  --color-logo: #ffffff;
+  --color-accent: #1e90ff;
+  --color-accent2: #0080ff;
+  --color-accent3: #ff6600;
+}
+
+.content-div a:hover {
+  color: var(--color-accent);
+}

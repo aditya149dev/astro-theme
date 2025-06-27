@@ -1,0 +1,31 @@
+---
+import X from "../icons/x.svg";
+import Reddit from "../icons/reddit.svg";
+import Instagram from "../icons/instagram.svg";
+import Threads from "../icons/threads.svg";
+import Mastodon from "../icons/mastodon.svg";
+import Pinterest from "../icons/pinterest.svg";
+import Rss from "../icons/rss.svg";
+
+interface Props {
+  name: string;
+  width?: number;
+  height?: number;
+}
+
+const { name, width = 24, height = 24 } = Astro.props;
+
+const SocialIcons: { [key: string]: any } = {
+  x: X,
+  reddit: Reddit,
+  instagram: Instagram,
+  threads: Threads,
+  mastodon: Mastodon,
+  pinterest: Pinterest,
+  rss: Rss,
+};
+
+const IconComponent = SocialIcons[name];
+---
+
+{IconComponent ? <IconComponent width={width} height={height} /> : <div />} 

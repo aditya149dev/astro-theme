@@ -1,0 +1,81 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { siteName } from "../consts";
+---
+
+<Layout
+  title={`Privacy Policy | ${siteName}`}
+  description={`Privacy Policy of ${siteName}`}
+  image={new URL("SiteName.webp", Astro.site)}
+>
+  <div
+    class="mx-4 xs:mx-8 sm:mx-12 md:mx-24 justify-self-center font-medium prose-h1:text-center text-content prose-lg md:prose-xl 2xl:prose-2xl"
+  >
+    <div>
+      <h1>Privacy Policy</h1>
+      <p>
+        information {siteName} information
+      </p>
+    </div>
+
+    <div>
+      <p>We use "essential cookies".</p>
+      <h2>Cookies</h2>
+      <p>
+        Cookies information
+      </p>
+      <p>
+        Site preferences (such as dark mode) are intended to provide an
+        enhanced, personalized experience and are only stored locally in
+        browser.
+      </p>
+    </div>
+    <div>
+      <h2>Amazon Affiliate</h2>
+      <p>
+        {siteName} is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to amazon.com.
+      </p>
+    </div>
+    <div>
+      <h2>Advertisements and Analytics</h2>
+      <p>
+       some information
+      </p>
+      <p>
+        Third Party Analytics - some information
+      </p>
+    </div>
+
+    <div class="flex flex-col">
+      <h4 class="text-xl md:text-2xl 2xl:text-3xl">
+        These links provide options to customize preferences for ads and opt-out
+        of analytics:
+      </h4>
+      <li>
+        Google ad settings - <a
+          href="https://adssettings.google.com"
+          class="hover:text-accent">https://adssettings.google.com</a
+        >
+      </li>
+      <li>
+        Google Analytics Opt-out - <a
+          href="https://tools.google.com/dlpage/gaoptout"
+          class="hover:text-accent">https://tools.google.com/dlpage/gaoptout</a
+        >
+      </li>
+
+      <p>
+        See google's privacy policy - <a
+          href="https://policies.google.com/privacy"
+          class="hover:text-accent">https://policies.google.com/privacy</a
+        >
+      </p>
+    </div>
+    <div>
+      <h2>Changes to this policy</h2>
+      <p>
+        policy changes information
+      </p>
+    </div>
+  </div>
+</Layout>
